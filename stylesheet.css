@@ -2,6 +2,13 @@ body {
     cursor: url("abe.cur") 4 12, url("abe.png") 4 12, url("abe.png"), pointer;
 }
 
+#sample {
+    width: 300px;
+    height: 300px;
+    border: #000 1px solid;
+    cursor: url(abe.png), auto;
+}
+
 
 h1 {
     color: red;
