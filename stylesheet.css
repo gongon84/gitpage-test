@@ -1,3 +1,7 @@
-.h1 {
+.top {
+    cursor: url(abe.cur), auto;
+}
+
+h1 {
     color: red;
 }
