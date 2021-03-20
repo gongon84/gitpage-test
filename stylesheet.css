@@ -1,12 +1,12 @@
 body {
-    cursor: url("abe.cur") 4 12, url("abe.png") 4 12, url("abe.png"), pointer;
+    cursor: url(abe.cur) 4 12, url(abe.png) 4 12, url(abe.gif), pointer;
 }
 
 #sample {
     width: 300px;
     height: 300px;
     border: #000 1px solid;
-    cursor: url(abe2.cur), url(abe.cur), auto;
+    cursor: url(abe.gif), url(abe.cur), auto;
 }
 
 
