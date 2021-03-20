@@ -2,58 +2,63 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>サンプル</title>
+    <title>サンプルサイト</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="anime.min.js"></script>
   </head>
 
   <body>
-    <div class="top">
-      <h1>サンプルページ</h1>
-      <iframe src="https://embed.music.apple.com/us/album/billie-jean/269572838?i=269573364&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ct=songs_billie_jean&amp;ls=1" height="150px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
-      
-      <H3>画像を動かす</H3>
-      <HR>
-      <div id="subtitle" style="position:absolute;visibility:hidden">
-        <img src="abe.png" width="150" height="172">
-      </div>
+    <div class="sample02"></div>
+    <h1 style="margin-top:50px;">サンプルページ</h1>
+    <div class="music">
+      <iframe src="https://embed.music.apple.com/us/album/%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B/1548223115?i=1548223116&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ct=songs_%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B&amp;ls=1" height="150px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
     </div>
 
-    <Script type="text/javascript">
-      var start_x, static_y, step, last_x, posi_x, timerID;
-      function Init(){
-        start_x = -300;
-        static_y = 100;
-        step=2;
-        posi_x = start_x;
-        if(document.all){
-          last_x = document.body.clientWidth/4;
-          subtitle.style.pixelLeft = start_x;
-          subtitle.style.pixelTop = static_y;
-          document.all("subtitle").style.visibility = 'visible';
-        }
-        if(document.layers){
-          last_x = innerWidth/4;
-          document.subtitle.left = start_x;
-          document.subtitle.ltop = static_y;
-          document.layers["subtitle"].visibility = 'visible';
-        }
-        move_image();
-      }
-      function move_image(){
-        if( posi_x > last_x ){
-          clearTimeout(timerID);
-        }
-        else{
-          posi_x += step;
-          if(document.all){
-            subtitle.style.pixelLeft = posi_x;
-          }
-          if(document.layers){
-            document.subtitle.left = posi_x;
-          }
-          timerID = setTimeout("move_image()", 10);
-        }
-      }
-      </Script>      
+    <div class="sample01"></div>
+    
+
+    </div>
+
+    <script>
+      anime({
+          targets: '.sample01',
+          width: '40%',
+          translateX: [200,1000],
+          rotate: '1turn',
+          easing: 'easeInOutQuad',
+          delay: 300,
+          direction: 'alternate',
+          loop: true
+      });
+
+      anime({
+        targets: '.sample02',
+        translateX: [
+          { value: 1000, duration: 1000, delay: 500 },
+          { value: 0, duration: 1000, delay: 500 }
+        ],
+        translateY: [
+          { value: -20, duration: 500 },
+          { value: 400, duration: 500, delay: 1000 },
+          { value: 0, duration: 500, delay: 1000 }
+        ],
+        scaleX: [
+          { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+          { value: 1, duration: 900 },
+          { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+          { value: 1, duration: 900 }
+        ],
+        scaleY: [
+          { value: [1.75, 1], duration: 500 },
+          { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+          { value: 1, duration: 450 },
+          { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+          { value: 1, duration: 450 }
+        ],
+        easing: 'easeOutElastic(1, .8)',
+        direction: 'alternate',
+        loop: true
+      });
+    </script>
   </body>
 </html>

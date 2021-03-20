@@ -4,8 +4,22 @@ body {
     height: 700px;
     border-bottom: 1px solid black;
     text-align: center;
+    background-color: #DDD;
 }
 
-h1 {
-    color: red;
+.music {
+    margin: 70px auto;
+}
+
+.sample01 {
+    width: 200px;
+    height:200px;
+    background-image: url(abe.png);
+}
+
+.sample02 {
+    width: 100px;
+    height:100px;
+    margin-left: 200px;
+    background-image: url(koike.png);
 }
