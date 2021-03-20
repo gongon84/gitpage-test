@@ -1,5 +1,9 @@
+body {
+    cursor: url(abe.cur) 4 12, url(abe.png) 4 12, pointer;
+}
+
 .top {
-    cursor: url(abe.cur), url(abe.png), pointer;
+    background-color: blue;
 }
 
 h1 {
