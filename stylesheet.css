@@ -1,11 +1,8 @@
-/* body {
-    cursor: url(abe.cur) 4 12, url(abe.png) 4 12, pointer;
-} */
+body {
+    cursor: url("abe.cur") 4 12, url("abe.png") 4 12, url("abe.png"), pointer;
+}
 
-/* .top {
-    background-color: blue;
-} */
 
 h1 {
-    color: blue;
+    color: red;
 }
