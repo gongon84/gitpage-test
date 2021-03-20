@@ -1,5 +1,5 @@
 .top {
-    cursor: url(abe.cur), auto;
+    cursor: url(abe.cur), url(abe.png), pointer;
 }
 
 h1 {
