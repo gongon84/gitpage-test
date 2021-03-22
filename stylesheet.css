@@ -9,8 +9,12 @@ body {
     height: 1200px;
     border-bottom: 1px solid black;
     text-align: center;
-    background-color: #DDD;
+    background-color: #FAFAFA;
     overflow: hidden;
+}
+
+.phone-item {
+    display: none;
 }
 
 .profile-image {
@@ -48,8 +52,46 @@ h1 {
     background-image: url(koike.png);
 }
 
+/* タブ */
+.nav {
+    margin: 40px auto;
+    width: 50%;
+}
+
+ul li {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
+}
+
+ul li a {
+    color: #3E4357;
+}
+
+ul li:hover {
+    color: #39A2F2;
+}
+
+.nav-link.active, .nav-item.show .nav-link {
+    /* color: #39A2F2 !important; */
+    color: white !important;
+    background-color: #3E4357 !important;
+}
+
+.tab-content {
+    margin-top: 50px;
+}
+/* ここまで */
 
 @media screen and (max-width: 500px) {
+
+    .pc-item {
+        display: none;
+    }
+
+    .phone-item {
+        display: inline-block;
+    }
 
     h1 {
         font-size: 2rem;
@@ -62,5 +104,9 @@ h1 {
     .smart-music {
         margin: 20px auto;
         display: block;
+    }
+
+    .nav {
+        width: 100%;
     }
 }
