@@ -4,6 +4,7 @@ body {
 }
 
 .top {
+    position: relative;
     cursor: url(abe2.png), pointer;
     width: 100%;
     height: 1200px;
@@ -22,6 +23,7 @@ body {
     height: 100px;
     border-radius: 100%;
     margin: 0 auto;
+    margin-top: 80px;
     background-image: url(profile-image.png);
 }
 
@@ -46,6 +48,7 @@ h1 {
 }
 
 .sample02 {
+    position: absolute;
     width: 100px;
     height:100px;
     margin-left: 200px;
@@ -84,6 +87,9 @@ ul li:hover {
 /* ここまで */
 
 @media screen and (max-width: 500px) {
+    .top {
+        height: 800px;
+    }
 
     .pc-item {
         display: none;
