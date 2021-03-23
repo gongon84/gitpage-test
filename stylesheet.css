@@ -7,7 +7,7 @@ body {
     position: relative;
     cursor: url(abe2.png), pointer;
     width: 100%;
-    height: 1200px;
+    height: 100%;
     border-bottom: 1px solid black;
     text-align: center;
     background-color: #FAFAFA;
@@ -24,7 +24,7 @@ body {
     border-radius: 100%;
     margin: 0 auto;
     margin-top: 40px;
-    background-image: url(profile-image.png);
+    background-image: url(haga.png);
 }
 
 h1 {
@@ -33,6 +33,15 @@ h1 {
     color: #3E4357; 
 }
 
+/* navコンテンツ１　アプリ */
+.app-wrap {
+    background-color: #3E4357;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* navコンテンツ３　music */
 .pc-music {
     margin: 70px auto;
 }
@@ -41,10 +50,13 @@ h1 {
     display: none;
 }
 
+
+/* アニメーション画像 */
 .sample01 {
-    width: 200px;
-    height:200px;
-    background-image: url(abe.png);
+    position: absolute;
+    width: 78px;
+    height:100px;
+    background-image: url(abe3.png);
 }
 
 .sample02 {
@@ -53,6 +65,13 @@ h1 {
     height:100px;
     margin-left: 200px;
     background-image: url(koike.png);
+}
+
+.sample03 {
+    /* position: absolute; */
+    width: 200px;
+    height:200px;
+    background-image: url(kirin.png);
 }
 
 /* タブ */
@@ -83,12 +102,17 @@ ul li:hover {
 
 .tab-content {
     margin-top: 50px;
+    height: 500px;
 }
 /* ここまで */
 
 @media screen and (max-width: 500px) {
     .top {
-        height: 800px;
+        height: 100%;
+    }
+
+    .app-wrap {
+        width: 100%;
     }
 
     .pc-item {
@@ -114,5 +138,9 @@ ul li:hover {
 
     .nav {
         width: 100%;
+    }
+
+    .tab-content {
+        height: 400px;
     }
 }

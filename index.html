@@ -16,6 +16,7 @@
 
   <body>
     <div class="top">
+      <div class="sample01"></div>
       <div class="sample02"></div>
       <div class="profile-image"></div>
       <h1>maro</h1>
@@ -23,18 +24,26 @@
       <!-- タブ -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">music</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">アプリ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">youtube</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">music</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">アプリ</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">youtube</a>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
           <!-- navコンテンツ１ -->
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="app-wrap p-3">
+              <a href="https://breakin-net.herokuapp.com/" target="_blank" style="color: white;">Breakin Net</a>
+            </h3>
+          </div>
+          <!-- navコンテンツ２ -->
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <img src="suga.png" class="pc-item" style="border-radius: 10%;">
+            <img src="suga2.png" class="phone-item" style="border-radius: 10%;">
             <div class="pc-music">
               <iframe src="https://embed.music.apple.com/us/album/%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B/1548223115?i=1548223116&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ct=songs_%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B&amp;ls=1" height="150px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
             </div>
@@ -42,20 +51,16 @@
               <iframe src="https://embed.music.apple.com/us/album/%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B/1548223115?i=1548223116&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ct=songs_%E6%AD%AF%E5%90%91%E3%81%8B%E3%81%88%E3%81%B0%E6%AE%BA%E3%81%9B&amp;ls=1" height="150px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 350px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
             </div>
           </div>
-          <!-- navコンテンツ２ -->
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <img src="suga.png" class="pc-item" style="border-radius: 10%;">
-            <img src="suga2.png" class="phone-item" style="border-radius: 10%;">
-          </div>
           <!-- navコンテンツ３ -->
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <a href="https://breakin-net.herokuapp.com/" target="_blank">Breakin Net</a>
+            <img src="suga.png" class="pc-item" style="border-radius: 10%;">
+            <img src="suga2.png" class="phone-item" style="border-radius: 10%;">
           </div>
         </div>
       <!-- ここまで -->
 
-      <div class="sample01"></div>
-      <div class="header">
+      <div class="sample03"></div>
+      <div class="header mb-4">
         <h3><i class="fas fa-tree" style="color:green;"></i> link forestで作成</h3>
       </div>
     </div>
@@ -63,10 +68,20 @@
     <script>
       anime({
           targets: '.sample01',
-          width: '40%',
-          translateX: [100,1000],
-          rotate: '1turn',
+          translateY: [-200,100],
+          // rotate: '1turn',
           easing: 'easeInOutQuad',
+          delay: 300,
+          direction: 'alternate',
+          loop: true
+      });
+
+      anime({
+          targets: '.sample03',
+          width: '40%',
+          translateX: [30,600],
+          // rotate: '1turn',
+          // easing: 'easeInOutQuad',
           delay: 300,
           direction: 'alternate',
           loop: true
@@ -80,7 +95,7 @@
         ],
         translateY: [
           { value: 10, duration: 500 },
-          { value: 200, duration: 500, delay: 1000 },
+          { value: 230, duration: 500, delay: 1000 },
           { value: 0, duration: 500, delay: 1000 }
         ],
         scaleX: [
