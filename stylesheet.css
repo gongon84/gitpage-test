@@ -5,7 +5,7 @@ body {
 
 .top {
     position: relative;
-    cursor: url(abe2.png), pointer;
+    cursor: url(/image/cursor.png), pointer;
     width: 100%;
     height: 100%;
     border-bottom: 1px solid black;
@@ -24,7 +24,7 @@ body {
     border-radius: 100%;
     margin: 0 auto;
     margin-top: 40px;
-    background-image: url(haga.png);
+    background-image: url(/image/profile.png);
 }
 
 h1 {
@@ -56,7 +56,7 @@ h1 {
     position: absolute;
     width: 78px;
     height:100px;
-    background-image: url(abe3.png);
+    background-image: url(/image/human1.png);
 }
 
 .sample02 {
@@ -64,14 +64,14 @@ h1 {
     width: 100px;
     height:100px;
     margin-left: 200px;
-    background-image: url(koike.png);
+    background-image: url(/image/human2.png);
 }
 
 .sample03 {
     /* position: absolute; */
     width: 200px;
     height:200px;
-    background-image: url(kirin.png);
+    background-image: url(/image/human3.png);
 }
 
 /* タブ */
